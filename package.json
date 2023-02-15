@@ -1,0 +1,27 @@
+{
+  "name": "utilibjs",
+  "version": "0.0.0",
+  "description": "My collection of most common used function in javascript. Most of them found in stackoverflow.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/errollsipagan/utilibjs.git"
+  },
+  "keywords": [
+    "functions",
+    "javascript",
+    "utility"
+  ],
+  "author": "Erroll Sipagan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/errollsipagan/utilibjs/issues"
+  },
+  "homepage": "https://github.com/errollsipagan/utilibjs#readme",
+  "devDependencies": {
+    "jest": "^29.4.3"
+  }
+}

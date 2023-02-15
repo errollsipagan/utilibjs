@@ -1,0 +1,1 @@
+export type PASTED_FILE_KIND = 'file';

@@ -4,13 +4,17 @@
   "description": "My collection of most common used function in javascript. Most of them found in stackoverflow.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "files": ["/lib"],
   "scripts": {
     "test": "jest --watchAll --verbose",
     "build": "tsc --build",
     "clean": "tsc --build --clean",
     "api": "jsdoc-to-readme --src lib/string-utils.js",
     "toc": "markdown-toc -i README.md  --maxdepth 3",
-    "doc": "npm run api && npm run toc"
+    "doc": "npm run api && npm run toc",
+    "pub": "npm run build && npm version patch --force && npm publish",
+    "test:pack": "npm run build && npm pack && tar -xvf utilibjs-0.0.0.tgz",
+    "test:clean": "npm run clean && rm -i utilibjs-0.0.0.tgz"
   },
   "repository": {
     "type": "git",

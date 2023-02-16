@@ -1,6 +1,6 @@
 {
   "name": "utilibjs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "My collection of most common used function in javascript. Most of them found in stackoverflow.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

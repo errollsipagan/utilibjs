@@ -1,10 +1,12 @@
 {
   "name": "utilibjs",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "My collection of most common used function in javascript. Most of them found in stackoverflow.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "files": ["/lib"],
+  "files": [
+    "/lib"
+  ],
   "scripts": {
     "test": "jest --watchAll --verbose",
     "build": "tsc --build",

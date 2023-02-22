@@ -1,4 +1,4 @@
-import { isEmail, generateRandomString, truncateStart, truncateMiddle, toCapitalize } from "../src/string-utils";
+import { isEmail, generateRandomString, truncateStart, truncateMiddle, toCapitalize, isPalindrome, getPalindromes } from "../src/string-utils";
 
 const testStrings = ['Lorem ipsum dolor amiet'];
 const truncateLength = 10;
@@ -57,6 +57,31 @@ describe('toCapitalize tests', () => {
         it(`\'${str}\' toCapitalize is ${truncated}`, () => {
             const allFirstLettersUppercase = regex.test(truncated);
             expect(allFirstLettersUppercase).toBe(true);
+        });
+    });
+});
+
+describe('isPalindrome tests', () => {
+    const invalid = ['test', 'lorem', 'hotdog'];
+    const valid = ['racecar','nasabayabasan', 'level'];
+    invalid.forEach(word => {
+        it(`\'${word}\' is not palindrome`, () => {
+            expect(isPalindrome(word)).toBe(false);
+        });
+    });
+    valid.forEach(word => {
+        it(`\'${word}\' is palindrome`, () => {
+            expect(isPalindrome(word)).toBe(true);
+        });
+    });
+});
+
+describe('getPossiblePalindromes tests', () => {
+    const words = ['fastracecar','hellosanasmith', 'level'];
+    const results = [['racecar',['aceca']],['sanas'], ['level']];
+    words.forEach((word, index) => {
+        it(`\'${word}\' palindromes: ${results[index].join(', ')}`, () => {
+            expect(getPalindromes(word, 2).length).toBe(results[index].length);
         });
     });
 });

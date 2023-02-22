@@ -5,7 +5,7 @@ import { getFileType, getRelativePath, renameFile, getFileName, convertKBToBytes
 // keybord imports
 import { isBackspaceKeyPressed, isEnterKeyPressed, isEscKeyPressed, isShiftKeyPressed, isSpacebarKeyPressed, isTabKeyPressed, isUndoKeyPressed } from './keyboard-utils';
 // string imports
-import { isEmail, generateRandomString, truncateEmail, truncateMiddle, truncateStart, toCapitalize } from './string-utils';
+import { isEmail, generateRandomString, truncateEmail, truncateMiddle, truncateStart, toCapitalize, isPalindrome, getPalindromes } from './string-utils';
 // browser exports
 export { isSafari, isChrome, isOffline, openInNewTab, triggerDownload, downloadFile };
 // file exports
@@ -13,4 +13,4 @@ export { getFileType, getRelativePath, renameFile, getFileName, convertKBToBytes
 // keyboard exports
 export { isBackspaceKeyPressed, isEnterKeyPressed, isEscKeyPressed, isShiftKeyPressed, isSpacebarKeyPressed, isTabKeyPressed, isUndoKeyPressed };
 // string exports
-export { isEmail, generateRandomString, truncateEmail, truncateMiddle, truncateStart, toCapitalize };
+export { isEmail, generateRandomString, truncateEmail, truncateMiddle, truncateStart, toCapitalize, isPalindrome, getPalindromes };

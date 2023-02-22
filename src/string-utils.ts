@@ -89,3 +89,44 @@ export const toCapitalize = (str: string): string => {
     }
     return newStr.join(' ');
 };
+
+/**
+ * Determines whether a given string is a palindrome with minimum required number of characters.
+ * @param {string} str - The string to be evaluated.
+ * @param {number} [minCharacter=1] - The minimum required number of characters for the string to be considered a palindrome.
+ * @returns {boolean} - True if the given string is a palindrome with the required number of characters, false otherwise.
+*/
+export const isPalindrome = (str: string, minCharacter: number = 1): boolean => {
+    const mid = str.length / 2;
+    let matchedChars = -1;
+    for (let x = 0, y = str.length - 1; x < mid; x++, y--) {
+        if (str[x] !== str[y]) {
+            return false;
+        }
+        else {
+            matchedChars += 1;
+        }
+    }
+    return matchedChars>=minCharacter;
+};
+
+/**
+ * Returns an array of all palindromes with minimum required number of characters in a given string.
+ * @param {string} str - The string to be evaluated.
+ * @param {number} [minCharacter=1] - The minimum required number of characters for a palindrome in the given string to be considered.
+ * @returns {string[]} - An array of all palindromes in the given string that meet the minimum required number of characters.
+*/
+export const getPalindromes = (str: string, minCharacter: number = 1): string[] => {
+    const palindromes = [];
+    for (let x = 0; x < str.length - 1; x++) {
+        for (let y = str.length - 1; y >= 0; y--) {
+            if (str[x] === str[y]) {
+                const possiblePalindrome = str.substring(x, y + 1);
+                if (isPalindrome(possiblePalindrome, minCharacter) && possiblePalindrome.length >= minCharacter * 2) {
+                    palindromes.push(possiblePalindrome);
+                }
+            }
+        }
+    }
+    return palindromes;
+}
